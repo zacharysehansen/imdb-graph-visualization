@@ -1,0 +1,31 @@
+{
+  "name": "imdb-graph-visualization",
+  "version": "1.0.0",
+  "description": "Interactive D3 network of the IMDb Top 250, linking movies that share cast members",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha tests.js"
+  },
+  "keywords": [
+    "d3",
+    "graph",
+    "network-visualization",
+    "imdb",
+    "javascript"
+  ],
+  "author": "Zachary Hansen",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^7.8.5",
+    "express": "^4.18.2",
+    "http-server": "^14.1.1",
+    "jsdom": "^22.1.0",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "mocha": "^10.2.0"
+  }
+}

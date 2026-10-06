@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="#" rel="shortcut icon" />
+		<link href="./imdb.png" rel="shortcut icon" type="image/png" />
+		<link rel="stylesheet" type="text/css" href="./styles.css" />
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<script
+			src="https://kit.fontawesome.com/bc88da1465.js"
+			crossorigin="anonymous"
+		></script>
+		<script type="module" src="./index.js"></script>
+		<title>IMDb Viz</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img alt="IMDB logo" src="./imdb.png" />
+				<hr />
+				<div class="button" id="add-node-button">
+					<i class="fa-solid fa-plus"></i>
+				</div>
+				<p>Add node</p>
+				<div class="button" id="statistics-button">
+					<i class="fa-solid fa-chart-simple"></i>
+				</div>
+				<p>Statistics</p>
+				<div class="button" id="swap-layout-button">
+					<i class="fa-solid fa-arrow-right-arrow-left"></i>
+				</div>
+				<p>Layout</p>
+				<div class="button" id="search-button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</div>
+				<p>Search</p>
+				<div class="button" id="subgraph-button">
+					<i class="fa-solid fa-diagram-project"></i>
+				</div>
+				<p>Subgraph</p>
+			</nav>
+		</header>
+		<div id="vis-container">
+			<div id="graph"></div>
+			<div id="statistics-container">
+				<p id="avg-node-degree"></p>
+				<p id="num-connected-comps"></p>
+				<p id="graph-density"></p>
+				<p id="graph-diameter"></p>
+			</div>
+			<div class="form-box" id="add-node-container">
+				<div>
+					<h2>Add Node</h2>
+					<i class="fa-regular fa-circle-xmark" id="add-node-close"></i>
+				</div>
+				<form>
+					<div>
+						<label for="name">Name</label>
+						<input id="name" name="name" type="text" />
+					</div>
+					<div>
+						<label for="year">Year</label>
+						<input id="year" name="year" type="year" />
+					</div>
+					<div class="submit-button" id="add-node-submit">
+						<p>Add Node</p>
+						<i class="fa-solid fa-plus"></i>
+					</div>
+				</form>
+			</div>
+			<div class="form-box" id="search-container">
+				<div>
+					<h2>Search</h2>
+					<i class="fa-regular fa-circle-xmark" id="search-close"></i>
+				</div>
+				<form>
+					<div>
+						<label for="id">ID</label>
+						<input id="id" name="id" type="text" />
+					</div>
+					<div class="submit-button" id="search-submit">
+						<p>Search</p>
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
